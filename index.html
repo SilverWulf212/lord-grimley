@@ -1893,6 +1893,105 @@
     }
 
     /* ========================================
+       ACCESSIBILITY
+       ======================================== */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ========================================
+       REDUCED MOTION
+       ======================================== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .parallax-layer,
+      .particle,
+      .leaf,
+      .eye,
+      .flicker,
+      .flicker-slow,
+      .creaking-sign,
+      .candle::before,
+      .candle::after,
+      .blood-drop,
+      .lightning-overlay {
+        animation: none !important;
+      }
+
+      .hero-zombie-hands {
+        animation: none !important;
+        transform: translateY(0) !important;
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    /* ========================================
+       MOBILE MENU
+       ======================================== */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 10, 12, 0.98);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .mobile-nav.active {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--bone);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .mobile-nav a:hover {
+      color: var(--blood-bright);
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* ========================================
        RESPONSIVE
        ======================================== */
     @media (max-width: 1024px) {
@@ -2088,6 +2187,18 @@
     </div>
   </header>
 
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="pages/collections.html?c=best-sellers">New Arrivals</a>
+    <a href="pages/collections.html?c=halloween-masks">Masks</a>
+    <a href="pages/collections.html?c=props">Props</a>
+    <a href="pages/collections.html?c=collectibles">Collectibles</a>
+    <a href="pages/collections.html?c=halloween-ornaments">Ornaments</a>
+    <a href="pages/collections.html?c=clearance-sale">Sale</a>
+    <a href="pages/about.html">About</a>
+    <a href="pages/contact.html">Contact</a>
+  </nav>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-zombie-hands"></div>
@@ -2138,7 +2249,7 @@
 
     <div class="category-grid">
       <a href="pages/collections.html?c=latex-masks" class="category-card reveal">
-        <img src="old_site/Lord-Grimley-Mask-Category-Halloween-2026.webp" alt="Premium Latex Halloween Masks - Zombies, Demons, Creatures" class="category-image" loading="lazy">
+        <img src="old_site/Lord-Grimley-Mask-Category-Halloween-2026.webp" alt="Premium Latex Halloween Masks - Zombies, Demons, Creatures" class="category-image" width="280" height="350" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Latex Masks</h3>
           <p class="category-count">143 horrors await</p>
@@ -2149,7 +2260,7 @@
       </a>
 
       <a href="pages/collections.html?c=props" class="category-card reveal">
-        <img src="old_site/Clowns-Lord-Grimleys-Manor-2025-web.webp" alt="Horror Props and Haunted House Decorations" class="category-image" loading="lazy">
+        <img src="old_site/Clowns-Lord-Grimleys-Manor-2025-web.webp" alt="Horror Props and Haunted House Decorations" class="category-image" width="280" height="350" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Props & Decor</h3>
           <p class="category-count">87 terrors lurk</p>
@@ -2160,7 +2271,7 @@
       </a>
 
       <a href="pages/collections.html?c=collectibles" class="category-card reveal">
-        <img src="old_site/Trick-Or-Treat-Studios-Killer-Klowns-From-Outer-Space-Lord-Grimley.webp" alt="Horror Movie Collectibles - Killer Klowns, Gremlins, More" class="category-image" loading="lazy">
+        <img src="old_site/Trick-Or-Treat-Studios-Killer-Klowns-From-Outer-Space-Lord-Grimley.webp" alt="Horror Movie Collectibles - Killer Klowns, Gremlins, More" class="category-image" width="280" height="350" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Collectibles</h3>
           <p class="category-count">56 treasures hidden</p>
@@ -2171,7 +2282,7 @@
       </a>
 
       <a href="pages/collections.html?c=halloween-ornaments" class="category-card reveal">
-        <img src="old_site/Lord-Grimley-Halloween-Ornament-Category-2026.webp" alt="Halloween Ornaments and Seasonal Decorations" class="category-image" loading="lazy">
+        <img src="old_site/Lord-Grimley-Halloween-Ornament-Category-2026.webp" alt="Halloween Ornaments and Seasonal Decorations" class="category-image" width="280" height="350" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Ornaments</h3>
           <p class="category-count">34 festive frights</p>
@@ -2182,7 +2293,7 @@
       </a>
 
       <a href="pages/collections.html?c=accessories" class="category-card reveal">
-        <img src="old_site/Accessory-Category-2020.webp" alt="Halloween Costume Accessories - Gloves, Hands, Feet" class="category-image" loading="lazy">
+        <img src="old_site/Accessory-Category-2020.webp" alt="Halloween Costume Accessories - Gloves, Hands, Feet" class="category-image" width="280" height="350" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Accessories</h3>
           <p class="category-count">62 finishing touches</p>
@@ -2193,7 +2304,7 @@
       </a>
 
       <a href="pages/collections.html?c=lord-grimley-exclusives" class="category-card reveal">
-        <img src="old_site/Exclusive-Lord-Grimley-Mask-Category-Halloween-2026.webp" alt="Lord Grimley Exclusive Limited Edition Masks" class="category-image" loading="lazy">
+        <img src="old_site/Exclusive-Lord-Grimley-Mask-Category-Halloween-2026.webp" alt="Lord Grimley Exclusive Limited Edition Masks" class="category-image" width="280" height="350" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Lord Grimley Exclusives</h3>
           <p class="category-count">12 rare specimens</p>
@@ -2242,7 +2353,7 @@
       <article class="product-card reveal" data-product-id="1">
         <span class="product-badge">Sale</span>
         <div class="product-image-wrapper">
-          <img src="old_site/Texas_Chainsaw_Leatherface_2023.webp" alt="Texas Chainsaw Massacre Leatherface Deluxe Latex Mask by Trick or Treat Studios" class="product-image" loading="lazy">
+          <img src="old_site/Texas_Chainsaw_Leatherface_2023.webp" alt="Texas Chainsaw Massacre Leatherface Deluxe Latex Mask by Trick or Treat Studios" class="product-image" width="280" height="280" loading="lazy">
           <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -2258,7 +2369,7 @@
       <article class="product-card reveal" data-product-id="2">
         <span class="product-badge product-badge--new">New</span>
         <div class="product-image-wrapper">
-          <img src="old_site/Beetlejuice_Order_2025.webp" alt="Beetlejuice Movie Deluxe Latex Mask with Hair by Trick or Treat Studios" class="product-image" loading="lazy">
+          <img src="old_site/Beetlejuice_Order_2025.webp" alt="Beetlejuice Movie Deluxe Latex Mask with Hair by Trick or Treat Studios" class="product-image" width="280" height="280" loading="lazy">
           <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -2273,7 +2384,7 @@
       <article class="product-card reveal" data-product-id="3">
         <span class="product-badge product-badge--new">New</span>
         <div class="product-image-wrapper">
-          <img src="old_site/Trick-Or-Treat-Studios-Gremlins-2-New-Batch-Mogwai-Puppets01.webp" alt="Gremlins 2 The New Batch Mogwai Hand Puppet Collection by Trick or Treat Studios" class="product-image" loading="lazy">
+          <img src="old_site/Trick-Or-Treat-Studios-Gremlins-2-New-Batch-Mogwai-Puppets01.webp" alt="Gremlins 2 The New Batch Mogwai Hand Puppet Collection by Trick or Treat Studios" class="product-image" width="280" height="280" loading="lazy">
           <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -2288,7 +2399,7 @@
       <article class="product-card reveal" data-product-id="4">
         <span class="product-badge product-badge--exclusive">Exclusive</span>
         <div class="product-image-wrapper">
-          <img src="old_site/Lord-Grimley-New-Mask-Category-Halloween-2026.webp" alt="Lord Grimley Manor Exclusive 2026 Premium Latex Mask Collection" class="product-image" loading="lazy">
+          <img src="old_site/Lord-Grimley-New-Mask-Category-Halloween-2026.webp" alt="Lord Grimley Manor Exclusive 2026 Premium Latex Mask Collection" class="product-image" width="280" height="280" loading="lazy">
           <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -2302,7 +2413,7 @@
 
       <article class="product-card reveal" data-product-id="5">
         <div class="product-image-wrapper">
-          <img src="old_site/Trick-Or-Treat-Studios-Killer-Klowns-From-Outer-Space-Lord-Grimley.webp" alt="Killer Klowns from Outer Space Collectible Figure by Trick or Treat Studios" class="product-image" loading="lazy">
+          <img src="old_site/Trick-Or-Treat-Studios-Killer-Klowns-From-Outer-Space-Lord-Grimley.webp" alt="Killer Klowns from Outer Space Collectible Figure by Trick or Treat Studios" class="product-image" width="280" height="280" loading="lazy">
           <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -2316,7 +2427,7 @@
 
       <article class="product-card reveal" data-product-id="6">
         <div class="product-image-wrapper">
-          <img src="old_site/Effects-Category-2020.webp" alt="Halloween Special Effects Makeup and Prosthetics" class="product-image" loading="lazy">
+          <img src="old_site/Effects-Category-2020.webp" alt="Halloween Special Effects Makeup and Prosthetics" class="product-image" width="280" height="280" loading="lazy">
           <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -2331,7 +2442,7 @@
       <article class="product-card reveal" data-product-id="7">
         <span class="product-badge">Sale</span>
         <div class="product-image-wrapper">
-          <img src="old_site/Lord-Grimley-Halloween-Ornament-Category-2026.webp" alt="Halloween Horror Ornaments Collection" class="product-image" loading="lazy">
+          <img src="old_site/Lord-Grimley-Halloween-Ornament-Category-2026.webp" alt="Halloween Horror Ornaments Collection" class="product-image" width="280" height="280" loading="lazy">
           <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -2346,7 +2457,7 @@
 
       <article class="product-card reveal" data-product-id="8">
         <div class="product-image-wrapper">
-          <img src="old_site/Clowns-Lord-Grimleys-Manor-2025-web.webp" alt="Evil Clown Masks and Props Collection" class="product-image" loading="lazy">
+          <img src="old_site/Clowns-Lord-Grimleys-Manor-2025-web.webp" alt="Evil Clown Masks and Props Collection" class="product-image" width="280" height="280" loading="lazy">
           <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -2378,7 +2489,7 @@
   <section class="about">
     <div class="about-inner">
       <div class="about-image-wrapper reveal">
-        <img src="src/img/08-loading-splash_logo-embossed-on-book.webp" alt="Lord Grimley - Proprietor of Lord Grimley's Manor Horror Collectibles" class="about-image">
+        <img src="src/img/08-loading-splash_logo-embossed-on-book.webp" alt="Lord Grimley - Proprietor of Lord Grimley's Manor Horror Collectibles" class="about-image" width="600" height="400">
         <div class="about-image-frame"></div>
       </div>
       <div class="about-content reveal">
@@ -2409,7 +2520,8 @@
       <h2 class="newsletter-title">Join the Crypt</h2>
       <p class="newsletter-text">Be the first to know when new horrors arrive. Exclusive deals for members of the manor.</p>
       <form class="newsletter-form">
-        <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+        <label for="newsletter-email" class="visually-hidden">Email address</label>
+        <input type="email" id="newsletter-email" name="email" class="newsletter-input" placeholder="Enter your email address…" autocomplete="email" required>
         <button type="submit" class="newsletter-button bleed-btn">
           Subscribe
           <div class="blood-drips">
@@ -2870,6 +2982,42 @@
         }
       });
     });
+
+    // ========================================
+    // MOBILE MENU
+    // ========================================
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (mobileMenuBtn && mobileNav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+        mobileMenuBtn.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+        document.body.style.overflow = isExpanded ? '' : 'hidden';
+      });
+
+      // Close menu when clicking a link
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          mobileMenuBtn.classList.remove('active');
+          mobileNav.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // Close menu on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          mobileMenuBtn.classList.remove('active');
+          mobileNav.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    }
 
     // ========================================
     // INITIALIZE

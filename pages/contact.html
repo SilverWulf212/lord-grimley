@@ -128,23 +128,22 @@
           <form class="contact-form" id="contact-form">
             <div class="form-group">
               <label for="name">Your Name *</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" autocomplete="name" required>
             </div>
 
             <div class="form-group">
               <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
 
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone">
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
             </div>
 
             <div class="form-group">
               <label for="order-number">Order Number (if applicable)</label>
-              <input type="text" id="order-number" name="order_number" placeholder="e.g., #12345">
-            </div>
+              <input type="text" id="order-number" name="order_number" autocomplete="off" placeholder="e.g., #12345">
 
             <div class="form-group">
               <label for="subject">Subject *</label>
