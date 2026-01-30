@@ -119,7 +119,7 @@
 
         <div class="sidebar-section sidebar-cta">
           <a href="about.html" class="sidebar-link">About Us</a>
-          <a href="blog.html" class="sidebar-link">Blog</a>
+          <a href="collections.html" class="sidebar-link">Blog</a>
         </div>
       </aside>
 
@@ -198,7 +198,7 @@
           <li><a href="#">Instagram</a></li>
           <li><a href="#">YouTube</a></li>
           <li><a href="#">TikTok</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="collections.html">Blog</a></li>
         </ul>
       </div>
       <div class="footer-section footer-newsletter">
@@ -259,7 +259,7 @@
           <article class="product-card">
             ${product.onSale ? '<span class="product-badge sale">SALE</span>' : ''}
             ${product.featured ? '<span class="product-badge featured">FEATURED</span>' : ''}
-            <a href="product.html?id=${product.id}" class="product-link">
+            <a href="#" class="product-link" data-product-id="${product.id}" onclick="event.preventDefault();">
               <div class="product-image-wrapper">
                 <img src="../${product.image}" alt="${product.title}" class="product-image" loading="lazy">
                 <div class="product-overlay">
