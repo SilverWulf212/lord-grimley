@@ -1143,10 +1143,13 @@
     }
 
     .category-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
       position: relative;
       aspect-ratio: 4/5;
       overflow: hidden;
-      cursor: none;
+      cursor: pointer;
       border: 1px solid rgba(232, 220, 196, 0.1);
     }
 
@@ -2040,18 +2043,20 @@
   <!-- Header -->
   <header>
     <div class="header-inner">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         Lord Grimley's
         <span>Manor of Horrors</span>
       </a>
 
       <nav>
-        <a href="#">New Arrivals</a>
-        <a href="#">Masks</a>
-        <a href="#">Props</a>
-        <a href="#">Collectibles</a>
-        <a href="#">Ornaments</a>
-        <a href="#">Sale</a>
+        <a href="pages/collections.html?c=best-sellers">New Arrivals</a>
+        <a href="pages/collections.html?c=halloween-masks">Masks</a>
+        <a href="pages/collections.html?c=props">Props</a>
+        <a href="pages/collections.html?c=collectibles">Collectibles</a>
+        <a href="pages/collections.html?c=halloween-ornaments">Ornaments</a>
+        <a href="pages/collections.html?c=clearance-sale">Sale</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/contact.html">Contact</a>
       </nav>
 
       <div class="nav-icons">
@@ -2132,7 +2137,7 @@
     </div>
 
     <div class="category-grid">
-      <article class="category-card reveal">
+      <a href="pages/collections.html?c=latex-masks" class="category-card reveal">
         <img src="old_site/Lord-Grimley-Mask-Category-Halloween-2026.webp" alt="Premium Latex Halloween Masks - Zombies, Demons, Creatures" class="category-image" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Latex Masks</h3>
@@ -2141,9 +2146,9 @@
         <div class="category-arrow">
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
-      </article>
+      </a>
 
-      <article class="category-card reveal">
+      <a href="pages/collections.html?c=props" class="category-card reveal">
         <img src="old_site/Clowns-Lord-Grimleys-Manor-2025-web.webp" alt="Horror Props and Haunted House Decorations" class="category-image" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Props & Decor</h3>
@@ -2152,9 +2157,9 @@
         <div class="category-arrow">
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
-      </article>
+      </a>
 
-      <article class="category-card reveal">
+      <a href="pages/collections.html?c=collectibles" class="category-card reveal">
         <img src="old_site/Trick-Or-Treat-Studios-Killer-Klowns-From-Outer-Space-Lord-Grimley.webp" alt="Horror Movie Collectibles - Killer Klowns, Gremlins, More" class="category-image" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Collectibles</h3>
@@ -2163,9 +2168,9 @@
         <div class="category-arrow">
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
-      </article>
+      </a>
 
-      <article class="category-card reveal">
+      <a href="pages/collections.html?c=halloween-ornaments" class="category-card reveal">
         <img src="old_site/Lord-Grimley-Halloween-Ornament-Category-2026.webp" alt="Halloween Ornaments and Seasonal Decorations" class="category-image" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Ornaments</h3>
@@ -2174,9 +2179,9 @@
         <div class="category-arrow">
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
-      </article>
+      </a>
 
-      <article class="category-card reveal">
+      <a href="pages/collections.html?c=accessories" class="category-card reveal">
         <img src="old_site/Accessory-Category-2020.webp" alt="Halloween Costume Accessories - Gloves, Hands, Feet" class="category-image" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Accessories</h3>
@@ -2185,9 +2190,9 @@
         <div class="category-arrow">
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
-      </article>
+      </a>
 
-      <article class="category-card reveal">
+      <a href="pages/collections.html?c=lord-grimley-exclusives" class="category-card reveal">
         <img src="old_site/Exclusive-Lord-Grimley-Mask-Category-Halloween-2026.webp" alt="Lord Grimley Exclusive Limited Edition Masks" class="category-image" loading="lazy">
         <div class="category-content">
           <h3 class="category-name creaking-sign">Lord Grimley Exclusives</h3>
@@ -2196,7 +2201,7 @@
         <div class="category-arrow">
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
-      </article>
+      </a>
     </div>
   </section>
 
@@ -2205,7 +2210,7 @@
     <p class="sale-banner__label">Limited Time Only</p>
     <h2 class="sale-banner__title flicker-slow">Clearance Crypt</h2>
     <p class="sale-banner__subtitle">Up to 50% off select masks, props & collectibles</p>
-    <a href="#" class="sale-banner__cta bleed-btn">
+    <a href="pages/collections.html?c=clearance-sale" class="sale-banner__cta bleed-btn">
       Shop the Sale
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -2385,7 +2390,7 @@
         <p class="about-text">
           Each piece in our collection is hand-selected by Lord Grimley himself, ensuring that only the most terrifying, highest-quality items make it into our crypt. From licensed Trick or Treat Studios masterpieces to our own exclusive creations, we offer nightmares you simply won't find anywhere else.
         </p>
-        <a href="#" class="about-link bleed-btn">
+        <a href="pages/about.html" class="about-link bleed-btn">
           Read Our Story
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           <div class="blood-drips">
@@ -2433,25 +2438,25 @@
         <div>
           <h4 class="footer-heading">Shop</h4>
           <ul class="footer-links">
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Latex Masks</a></li>
-            <li><a href="#">Props & Decor</a></li>
-            <li><a href="#">Collectibles</a></li>
-            <li><a href="#">Ornaments</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Sale</a></li>
+            <li><a href="pages/collections.html?c=best-sellers">New Arrivals</a></li>
+            <li><a href="pages/collections.html?c=latex-masks">Latex Masks</a></li>
+            <li><a href="pages/collections.html?c=props">Props & Decor</a></li>
+            <li><a href="pages/collections.html?c=collectibles">Collectibles</a></li>
+            <li><a href="pages/collections.html?c=halloween-ornaments">Ornaments</a></li>
+            <li><a href="pages/collections.html?c=accessories">Accessories</a></li>
+            <li><a href="pages/collections.html?c=clearance-sale">Sale</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-heading">Information</h4>
           <ul class="footer-links">
-            <li><a href="#">About the Manor</a></li>
-            <li><a href="#">Shipping & Delivery</a></li>
-            <li><a href="#">Returns & Exchanges</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="pages/about.html">About the Manor</a></li>
+            <li><a href="pages/shipping.html">Shipping & Delivery</a></li>
+            <li><a href="pages/returns.html">Returns & Exchanges</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
+            <li><a href="pages/contact.html">Contact Us</a></li>
+            <li><a href="pages/privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
 
