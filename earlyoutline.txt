@@ -1,0 +1,31 @@
+I’m helping a friend migrate their Halloween-themed merchandise store, lordgrimley.com, from Square to Shopify. The goal is to create a custom, high-impact storefront that leverages Shopify’s flexibility while staying true to the horror brand aesthetic.
+
+Develop a detailed implementation blueprint for migrating, redesigning, and relaunching the store on Shopify. The plan should address the following areas:
+
+---
+
+1. **Technical Migration Strategy**:
+   - Define tools and methods for scraping product data, images, and metadata from lordgrimley.com.
+   - Structure the data to align with Shopify’s product import format (CSV, images, collections).
+   - Explain Shopify’s customization boundaries and developer access (Liquid, CSS, theme files).
+   - Recommend apps or automations that could support the migration process efficiently.
+
+---
+
+2. **Design System & Theming**:
+   - Design a dark, horror-themed visual system that includes gothic typography, eerie UI elements, and rich color schemes.
+   - Integrate dynamic effects (e.g., animated shadows, flickering lights, particle effects like sparks or smoke) in a way that’s visually compelling yet performant within Shopify’s theme ecosystem.
+   - Incorporate thematic visual motifs like zombies, vampires, witches, and the grotesque.
+   - Suggest base Shopify themes or third-party themes that allow for high customization or provide a strong foundation for custom development.
+
+---
+
+3. **UX/UI Redesign Guidelines**:
+   - Propose screen-level wireframes or layout strategies for key pages (homepage, category, product, cart, checkout).
+   - Emphasize horror storytelling and immersive atmosphere across the user journey, blending aesthetic engagement with conversion strategy.
+   - Recommend interactive components (e.g., hover-triggered animations, ambient sound toggles, horror countdowns for limited items).
+   - Ensure the UX design is mobile-first, responsive, and adheres to Shopify’s native UI patterns and limitations.
+
+---
+
+Output a comprehensive, scaffolded plan across all three sections. Each recommendation should take Shopify’s capabilities and limitations into account, and prioritize performance, scalability, and brand immersion.

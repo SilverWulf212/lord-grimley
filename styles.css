@@ -1278,3 +1278,277 @@ select:valid,
 textarea:valid:not(:placeholder-shown) {
   border-color: var(--moss);
 }
+
+/* ========================================
+   COMPARISON PAGES
+   ======================================== */
+
+.comparison-page,
+.comparison-index-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.comparison-tldr {
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.1), rgba(139, 0, 0, 0.05));
+  border: 1px solid rgba(139, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.comparison-tldr h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blood-bright);
+  margin-bottom: 1rem;
+}
+
+.comparison-section {
+  margin-bottom: 3rem;
+}
+
+.comparison-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: var(--bone);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(232, 220, 196, 0.2);
+}
+
+.comparison-section h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  color: var(--bone);
+  margin: 2rem 0 1rem;
+}
+
+.comparison-section p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.comparison-section ul {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.comparison-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+/* Comparison Tables */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid rgba(232, 220, 196, 0.15);
+}
+
+.comparison-table th {
+  background: rgba(139, 0, 0, 0.2);
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  color: var(--bone);
+}
+
+.comparison-table td {
+  background: rgba(21, 21, 24, 0.5);
+}
+
+.comparison-table tr:hover td {
+  background: rgba(139, 0, 0, 0.1);
+}
+
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: var(--bone-dark);
+}
+
+/* Verdict Box */
+.comparison-verdict {
+  background: rgba(45, 74, 62, 0.2);
+  border-left: 3px solid var(--moss);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Alternative Cards */
+.alternative-card {
+  background: var(--shadow);
+  border: 1px solid rgba(232, 220, 196, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.alternative-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: var(--bone);
+  margin: 0 0 0.5rem 0;
+}
+
+.alternative-tagline {
+  color: var(--bone-dark);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.alternative-details {
+  margin-bottom: 1.5rem;
+}
+
+.alternative-card .btn {
+  display: inline-block;
+}
+
+/* FAQ Items */
+.faq-item {
+  margin-bottom: 2rem;
+}
+
+.faq-item h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: var(--bone);
+  margin-bottom: 0.75rem;
+}
+
+.faq-item p {
+  color: var(--bone-dark);
+}
+
+/* CTA Section */
+.comparison-cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.15), rgba(21, 21, 24, 0.9));
+  border: 1px solid rgba(139, 0, 0, 0.3);
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.comparison-cta h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.8rem;
+  color: var(--bone);
+  margin-bottom: 1rem;
+  border: none;
+  padding: 0;
+}
+
+.comparison-cta p {
+  color: var(--bone-dark);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Comparison Grid (Index Page) */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.comparison-card {
+  display: block;
+  text-decoration: none;
+  background: var(--shadow);
+  border: 1px solid rgba(232, 220, 196, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.comparison-card:hover {
+  border-color: rgba(139, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.comparison-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: var(--bone);
+  margin: 0 0 0.75rem 0;
+}
+
+.comparison-card p {
+  color: var(--bone-dark);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.comparison-card-cta {
+  color: var(--blood-bright);
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Button Variants */
+.btn-tertiary {
+  background: transparent;
+  border: 1px solid var(--bone-dark);
+  color: var(--bone-dark);
+}
+
+.btn-tertiary:hover {
+  border-color: var(--bone);
+  color: var(--bone);
+  background: rgba(232, 220, 196, 0.1);
+}
+
+@media (max-width: 768px) {
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .comparison-cta {
+    padding: 2rem 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
