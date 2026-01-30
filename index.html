@@ -1,0 +1,2940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lord Grimley's Manor | Premium Halloween Masks, Props & Horror Collectibles</title>
+  <meta name="description" content="Shop premium latex Halloween masks, horror movie props, and exclusive collectibles at Lord Grimley's Manor. Featuring Trick or Treat Studios, licensed horror merchandise, and Lord Grimley exclusives.">
+  <meta name="keywords" content="Halloween masks, latex masks, horror props, Trick or Treat Studios, Leatherface mask, Beetlejuice, horror collectibles, Halloween decorations, scary masks, movie props">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0A0A0C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.lordgrimley.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lord Grimley's Manor | Premium Horror Masks & Collectibles">
+  <meta property="og:description" content="Where Nightmares Become Reality. Shop premium latex masks, horror props, and exclusive collectibles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.lordgrimley.com">
+  <meta property="og:image" content="https://www.lordgrimley.com/src/img/01-main-hero-background_victorian-haunted-manor_ultrawide-21x9.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lord Grimley's Manor">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lord Grimley's Manor | Premium Horror Masks & Collectibles">
+  <meta name="twitter:description" content="Where Nightmares Become Reality. Shop premium latex masks, horror props, and exclusive collectibles.">
+  <meta name="twitter:image" content="https://www.lordgrimley.com/src/img/01-main-hero-background_victorian-haunted-manor_ultrawide-21x9.webp">
+
+  <!-- Additional Effects -->
+  <link rel="stylesheet" href="effects.css">
+
+  <style>
+    :root {
+      --blood: #8B0000;
+      --blood-bright: #C41E3A;
+      --blood-dark: #5C0000;
+      --bone: #E8DCC4;
+      --bone-dark: #D4C4A8;
+      --midnight: #0A0A0C;
+      --shadow: #151518;
+      --fog: rgba(232, 220, 196, 0.03);
+      --candle: #FFD93D;
+      --candle-glow: rgba(255, 217, 61, 0.15);
+      --rust: #8B4513;
+      --moss: #2D4A3E;
+      --lightning: rgba(200, 220, 255, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Crimson Text', Georgia, serif;
+      background: var(--midnight);
+      color: var(--bone);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       FLOATING PARTICLES
+       ======================================== */
+    .particles-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: floatParticle linear infinite;
+    }
+
+    .particle--dust {
+      background: rgba(232, 220, 196, 0.3);
+      box-shadow: 0 0 3px rgba(232, 220, 196, 0.2);
+    }
+
+    .particle--ember {
+      background: radial-gradient(circle, var(--candle) 0%, #FF6B00 50%, transparent 70%);
+      box-shadow: 0 0 6px var(--candle);
+    }
+
+    .particle--fog {
+      background: radial-gradient(circle, rgba(232, 220, 196, 0.1) 0%, transparent 70%);
+      filter: blur(2px);
+    }
+
+    @keyframes floatParticle {
+      0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) translateX(var(--drift, 50px)) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* ========================================
+       WATCHING EYES
+       ======================================== */
+    .eyes-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .eye {
+      position: absolute;
+      width: 30px;
+      height: 18px;
+      background: radial-gradient(ellipse, #1a0a0a 0%, #0a0a0a 100%);
+      border-radius: 50%;
+      overflow: hidden;
+      opacity: 0;
+      animation: eyeBlink 8s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(139, 0, 0, 0.3);
+    }
+
+    .eye::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: radial-gradient(circle, #8B0000 0%, #5C0000 60%, #2a0a0a 100%);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease-out;
+    }
+
+    .eye::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      top: 35%;
+      left: 55%;
+    }
+
+    @keyframes eyeBlink {
+      0%, 45%, 55%, 100% {
+        opacity: 0.7;
+        transform: scaleY(1);
+      }
+      48%, 52% {
+        opacity: 0;
+        transform: scaleY(0.1);
+      }
+    }
+
+    .eye:nth-child(2) { animation-delay: -2s; }
+    .eye:nth-child(3) { animation-delay: -4s; }
+    .eye:nth-child(4) { animation-delay: -6s; }
+
+    /* ========================================
+       LIGHTNING EFFECT
+       ======================================== */
+    .lightning-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      background: var(--lightning);
+      opacity: 0;
+    }
+
+    .lightning-overlay.flash {
+      animation: lightningFlash 0.2s ease-out;
+    }
+
+    @keyframes lightningFlash {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      20% { opacity: 0.3; }
+      30% { opacity: 0.8; }
+      40% { opacity: 0.2; }
+      50% { opacity: 0.6; }
+      100% { opacity: 0; }
+    }
+
+    /* ========================================
+       PARALLAX GRAVEYARD
+       ======================================== */
+    .parallax-graveyard {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40vh;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .parallax-layer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background-repeat: repeat-x;
+      background-position: bottom left;
+      background-size: auto 100%;
+    }
+
+    .parallax-layer--trees {
+      height: 70%;
+      opacity: 0.15;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Cpath fill='%23000' d='M0 200 L20 200 L20 100 L0 120 Z M30 200 L35 200 L35 80 L25 60 L35 65 L30 40 L40 55 L35 30 L50 60 L45 55 L55 80 L45 75 L45 200 M70 200 L75 200 L75 120 L70 200 M100 200 L120 200 L120 90 L100 110 Z M150 200 L155 200 L155 70 L145 50 L155 55 L150 25 L160 45 L155 20 L170 50 L165 45 L175 70 L165 65 L165 200 M200 200 L220 200 L220 95 L200 115 Z M250 200 L255 200 L255 85 L245 65 L255 70 L250 40 L260 60 L255 35 L270 65 L265 60 L275 85 L265 80 L265 200 M300 200 L305 200 L305 110 L300 200 M330 200 L350 200 L350 100 L330 120 Z M370 200 L375 200 L375 75 L365 55 L375 60 L370 30 L380 50 L375 25 L390 55 L385 50 L395 75 L385 70 L385 200'/%3E%3C/svg%3E");
+      animation: parallaxDrift 60s linear infinite;
+    }
+
+    .parallax-layer--tombstones {
+      height: 35%;
+      opacity: 0.2;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100'%3E%3Cpath fill='%23111' d='M20 100 L20 60 Q20 40 35 40 Q50 40 50 60 L50 100 Z M80 100 L80 50 L70 50 L70 45 L80 45 L80 35 L85 35 L85 45 L95 45 L95 50 L85 50 L85 100 Z M130 100 L130 55 Q130 35 150 35 Q170 35 170 55 L170 100 Z M200 100 L200 70 L220 70 L220 100 Z M250 100 L250 45 Q250 25 270 25 Q290 25 290 45 L290 100 Z M320 100 L320 60 L310 60 L310 55 L320 55 L320 40 L325 40 L325 55 L335 55 L335 60 L325 60 L325 100 Z M360 100 L360 50 Q360 30 380 30 Q400 30 400 50 L400 100 Z'/%3E%3C/svg%3E");
+      animation: parallaxDrift 45s linear infinite reverse;
+    }
+
+    .parallax-layer--fence {
+      height: 20%;
+      opacity: 0.25;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Cpath fill='%23181818' d='M0 40 L0 15 L3 10 L6 15 L6 40 M10 40 L10 20 L10 40 M20 40 L20 15 L23 10 L26 15 L26 40 M30 40 L30 20 L30 40 M40 40 L40 15 L43 10 L46 15 L46 40 M50 40 L50 20 L50 40 M60 40 L60 15 L63 10 L66 15 L66 40 M70 40 L70 20 L70 40 M80 40 L80 15 L83 10 L86 15 L86 40 M90 40 L90 20 L90 40 M0 25 L100 25 M0 35 L100 35'/%3E%3C/svg%3E");
+      animation: parallaxDrift 30s linear infinite;
+    }
+
+    @keyframes parallaxDrift {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ========================================
+       PRODUCT CARD REVEAL EFFECT
+       ======================================== */
+    .product-image-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 20%, transparent 0%, transparent 30%, rgba(10, 10, 12, 0.4) 70%),
+        linear-gradient(to bottom, transparent 0%, rgba(10, 10, 12, 0.3) 100%);
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
+
+    .product-card:hover .product-image-wrapper::after {
+      opacity: 0;
+    }
+
+    .product-image-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.08;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+      z-index: 2;
+      transition: opacity 0.5s ease;
+    }
+
+    .product-card:hover .product-image-wrapper::before {
+      opacity: 0;
+    }
+
+    /* ========================================
+       BLEEDING BUTTONS
+       ======================================== */
+    .bleed-btn {
+      position: relative;
+      overflow: visible;
+    }
+
+    .bleed-btn::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+      height: 0;
+      background: linear-gradient(to bottom, var(--blood) 0%, var(--blood-dark) 100%);
+      transition: height 0.4s ease;
+      z-index: -1;
+      border-radius: 0 0 4px 4px;
+      transform: translateY(100%);
+    }
+
+    .bleed-btn:hover::after {
+      height: 20px;
+    }
+
+    .bleed-btn .blood-drips {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      overflow: hidden;
+      pointer-events: none;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .bleed-btn:hover .blood-drips {
+      opacity: 1;
+    }
+
+    .bleed-btn .btn-drip {
+      position: absolute;
+      top: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(to bottom, var(--blood), var(--blood-dark));
+      border-radius: 0 0 50% 50%;
+      transition: height 0.5s ease;
+    }
+
+    .bleed-btn:hover .btn-drip {
+      animation: btnDrip 1s ease-out forwards;
+    }
+
+    .bleed-btn .btn-drip:nth-child(1) { left: 15%; animation-delay: 0.1s; }
+    .bleed-btn .btn-drip:nth-child(2) { left: 35%; animation-delay: 0.25s; }
+    .bleed-btn .btn-drip:nth-child(3) { left: 55%; animation-delay: 0.15s; }
+    .bleed-btn .btn-drip:nth-child(4) { left: 75%; animation-delay: 0.3s; }
+    .bleed-btn .btn-drip:nth-child(5) { left: 90%; animation-delay: 0.2s; }
+
+    @keyframes btnDrip {
+      0% { height: 0; opacity: 1; }
+      70% { height: 25px; opacity: 1; }
+      100% { height: 30px; opacity: 0; }
+    }
+
+    /* ========================================
+       CREAKING SIGNS
+       ======================================== */
+    .creaking-sign {
+      display: inline-block;
+      transform-origin: top center;
+      animation: creakSign 4s ease-in-out infinite;
+    }
+
+    @keyframes creakSign {
+      0%, 100% { transform: rotate(-1deg); }
+      50% { transform: rotate(1deg); }
+    }
+
+    .category-name {
+      animation: creakSign 5s ease-in-out infinite;
+      animation-delay: var(--creak-delay, 0s);
+    }
+
+    .category-card:nth-child(1) .category-name { --creak-delay: 0s; }
+    .category-card:nth-child(2) .category-name { --creak-delay: -0.8s; }
+    .category-card:nth-child(3) .category-name { --creak-delay: -1.6s; }
+    .category-card:nth-child(4) .category-name { --creak-delay: -2.4s; }
+    .category-card:nth-child(5) .category-name { --creak-delay: -3.2s; }
+    .category-card:nth-child(6) .category-name { --creak-delay: -4s; }
+
+    /* ========================================
+       ADD TO CART ANIMATION
+       ======================================== */
+    .flying-product {
+      position: fixed;
+      pointer-events: none;
+      z-index: 99999;
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      opacity: 0;
+      filter: drop-shadow(0 0 20px var(--blood));
+    }
+
+    .flying-product.animate {
+      animation: flyToCart 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    @keyframes flyToCart {
+      0% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(0.5) rotate(180deg);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.1) rotate(360deg);
+      }
+    }
+
+    .cart-count.bump {
+      animation: cartBump 0.4s ease;
+    }
+
+    @keyframes cartBump {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .cart-ghost {
+      position: fixed;
+      pointer-events: none;
+      z-index: 99998;
+      width: 30px;
+      height: 30px;
+      opacity: 0;
+    }
+
+    .cart-ghost.animate {
+      animation: ghostWisp 0.8s ease-out forwards;
+    }
+
+    @keyframes ghostWisp {
+      0% {
+        opacity: 0.8;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(2) translateY(-50px);
+        filter: blur(10px);
+      }
+    }
+
+    /* ========================================
+       FLICKERING LIGHTS
+       ======================================== */
+    .flicker {
+      animation: flicker 0.1s ease-in-out infinite alternate;
+    }
+
+    .flicker-slow {
+      animation: flickerSlow 3s ease-in-out infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.95; }
+    }
+
+    @keyframes flickerSlow {
+      0%, 100% { opacity: 1; filter: brightness(1); }
+      92% { opacity: 1; filter: brightness(1); }
+      93% { opacity: 0.8; filter: brightness(0.8); }
+      94% { opacity: 1; filter: brightness(1.1); }
+      95% { opacity: 0.9; filter: brightness(0.9); }
+      96% { opacity: 1; filter: brightness(1); }
+    }
+
+    .product-badge {
+      animation: flickerSlow 4s ease-in-out infinite;
+    }
+
+    .product-badge:nth-child(odd) {
+      animation-delay: -2s;
+    }
+
+    .announcement-bar {
+      animation: flickerSlow 5s ease-in-out infinite;
+    }
+
+    /* ========================================
+       SOUND TOGGLE
+       ======================================== */
+    .sound-toggle {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      width: 44px;
+      height: 44px;
+      background: rgba(21, 21, 24, 0.8);
+      border: 1px solid rgba(139, 0, 0, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: none;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .sound-toggle:hover {
+      background: rgba(139, 0, 0, 0.3);
+      border-color: var(--blood);
+    }
+
+    .sound-toggle svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--bone-dark);
+      stroke-width: 1.5;
+      fill: none;
+      transition: stroke 0.3s ease;
+    }
+
+    .sound-toggle:hover svg {
+      stroke: var(--bone);
+    }
+
+    .sound-toggle.muted svg .sound-wave {
+      opacity: 0.3;
+    }
+
+    /* ========================================
+       SEASONAL FALLING LEAVES
+       ======================================== */
+    .leaves-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .leaf {
+      position: absolute;
+      top: -50px;
+      opacity: 0.7;
+      animation: leafFall linear infinite;
+    }
+
+    .leaf svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--rust);
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+    }
+
+    .leaf:nth-child(odd) svg {
+      fill: #8B4513;
+    }
+
+    .leaf:nth-child(3n) svg {
+      fill: #A0522D;
+    }
+
+    @keyframes leafFall {
+      0% {
+        transform: translateY(0) rotate(0deg) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.7;
+      }
+      90% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg) translateX(var(--leaf-drift, 100px));
+        opacity: 0;
+      }
+    }
+
+    /* ========================================
+       BLOOD DRIP FRAME SYSTEM
+       ======================================== */
+    .blood-frame {
+      position: relative;
+      border: 2px solid rgba(139, 0, 0, 0.4);
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 0, 0, 0.2);
+    }
+
+    .blood-frame--simple {
+      border: 1px solid rgba(139, 0, 0, 0.3);
+      box-shadow: none;
+    }
+
+    .blood-frame--ornate {
+      border: 3px double rgba(139, 0, 0, 0.5);
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(139, 0, 0, 0.3);
+    }
+
+    .blood-drip-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      overflow: hidden;
+      pointer-events: none;
+      transform: translateY(100%);
+      z-index: 10;
+    }
+
+    .blood-drop {
+      position: absolute;
+      top: 0;
+      animation: bloodDrip var(--duration, 2.5s) ease-in var(--delay, 0s) infinite;
+      will-change: transform, opacity;
+    }
+
+    .blood-drop__body {
+      width: var(--size, 5px);
+      height: calc(var(--size, 5px) * 1.4);
+      background: linear-gradient(180deg, var(--blood) 0%, var(--blood-dark) 100%);
+      border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+      animation: bloodStretch 1.5s ease-in-out infinite;
+      filter: drop-shadow(0 0 3px var(--blood));
+    }
+
+    .blood-drop__trail {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: var(--trail-height, 10px);
+      background: linear-gradient(to top, var(--blood), transparent);
+      border-radius: 2px 2px 0 0;
+      opacity: 0.7;
+    }
+
+    @keyframes bloodDrip {
+      0% {
+        transform: translateY(0) scaleY(1);
+        opacity: 0.85;
+      }
+      15% {
+        transform: translateY(5px) scaleY(1.3);
+        opacity: 0.85;
+      }
+      30% {
+        transform: translateY(15px) scaleY(1.1);
+        opacity: 0.7;
+      }
+      60% {
+        transform: translateY(40px) scaleY(1);
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateY(65px) scaleY(0.8);
+        opacity: 0;
+      }
+    }
+
+    @keyframes bloodStretch {
+      0%, 100% { transform: scaleY(1) scaleX(1); }
+      50% { transform: scaleY(1.15) scaleX(0.92); }
+    }
+
+    /* ========================================
+       ATMOSPHERIC EFFECTS
+       ======================================== */
+    .atmosphere {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .atmosphere::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(ellipse at 20% 0%, rgba(139, 0, 0, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, rgba(139, 0, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, transparent 0%, var(--midnight) 100%);
+    }
+
+    .atmosphere::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      mix-blend-mode: overlay;
+    }
+
+    .fog {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 30vh;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.4;
+    }
+
+    .fog-layer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top,
+        rgba(232, 220, 196, 0.08) 0%,
+        rgba(232, 220, 196, 0.04) 30%,
+        transparent 100%
+      );
+      animation: fogDrift 30s linear infinite;
+    }
+
+    .fog-layer:nth-child(2) {
+      animation-duration: 45s;
+      animation-direction: reverse;
+      opacity: 0.5;
+    }
+
+    @keyframes fogDrift {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ========================================
+       HEADER
+       ======================================== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      background: linear-gradient(to bottom, var(--midnight) 0%, transparent 100%);
+      transition: background 0.3s ease;
+    }
+
+    header.scrolled {
+      background: rgba(10, 10, 12, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(139, 0, 0, 0.3);
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bone);
+      text-decoration: none;
+      position: relative;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.6rem;
+      font-family: 'Crimson Text', serif;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: var(--blood);
+      margin-top: 0.2rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    nav a {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--bone-dark);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--blood);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--bone);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-icon {
+      width: 20px;
+      height: 20px;
+      stroke: var(--bone-dark);
+      stroke-width: 1.5;
+      fill: none;
+      cursor: none;
+      transition: stroke 0.3s ease;
+    }
+
+    .nav-icon:hover {
+      stroke: var(--bone);
+    }
+
+    .cart-count {
+      position: relative;
+    }
+
+    .cart-count::after {
+      content: attr(data-count);
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 16px;
+      height: 16px;
+      background: var(--blood);
+      border-radius: 50%;
+      font-size: 0.6rem;
+      font-family: 'Cinzel', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: none;
+      padding: 5px;
+    }
+
+    .mobile-menu-btn span {
+      width: 24px;
+      height: 2px;
+      background: var(--bone);
+      transition: all 0.3s ease;
+    }
+
+    /* ========================================
+       HERO SECTION
+       ======================================== */
+    .hero {
+      position: relative;
+      z-index: 10;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem 4rem;
+      overflow: hidden;
+      background: url('src/img/01-main-hero-background_victorian-haunted-manor_ultrawide-21x9.webp') center center / cover no-repeat;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(10,10,12,0.3) 0%, rgba(10,10,12,0.6) 50%, rgba(10,10,12,0.95) 100%);
+      z-index: 1;
+    }
+
+    .hero-zombie-hands {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: url('src/img/02-hero-overlay_zombie-hands_transparent-no-bg.png') bottom center / contain no-repeat;
+      z-index: 2;
+      pointer-events: none;
+      animation: handsReach 3s ease-in-out infinite;
+    }
+
+    @keyframes handsReach {
+      0%, 100% { transform: translateY(5%); }
+      50% { transform: translateY(0%); }
+    }
+
+    .hero-content {
+      text-align: center;
+      max-width: 900px;
+      animation: fadeUp 1.2s ease-out;
+      position: relative;
+      z-index: 5;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-ornament {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blood), transparent);
+      margin: 0 auto 2rem;
+      position: relative;
+    }
+
+    .hero-ornament::before,
+    .hero-ornament::after {
+      content: '†';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: var(--blood);
+    }
+
+    .hero-ornament::before { left: -20px; }
+    .hero-ornament::after { right: -20px; }
+
+    .hero-subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--blood);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 1.2s ease-out 0.2s both;
+    }
+
+    .hero-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(2.8rem, 10vw, 6.5rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 1.2s ease-out 0.4s both;
+      background: linear-gradient(180deg, var(--bone) 0%, var(--bone-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 80px rgba(139, 0, 0, 0.3);
+    }
+
+    .hero-tagline {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--bone-dark);
+      margin-bottom: 3rem;
+      animation: fadeUp 1.2s ease-out 0.6s both;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--bone);
+      background: transparent;
+      border: 1px solid var(--blood);
+      padding: 1.25rem 3rem;
+      cursor: none;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 1.2s ease-out 0.8s both;
+      text-decoration: none;
+    }
+
+    .hero-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--blood);
+      transition: left 0.4s ease;
+      z-index: -1;
+    }
+
+    .hero-cta:hover::before {
+      left: 0;
+    }
+
+    .hero-cta:hover {
+      border-color: var(--blood-bright);
+    }
+
+    .frame-corner {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 1px solid rgba(139, 0, 0, 0.5);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .frame-corner.tl { top: 2rem; left: 2rem; border-right: none; border-bottom: none; }
+    .frame-corner.tr { top: 2rem; right: 2rem; border-left: none; border-bottom: none; }
+    .frame-corner.bl { bottom: 2rem; left: 2rem; border-right: none; border-top: none; }
+    .frame-corner.br { bottom: 2rem; right: 2rem; border-left: none; border-top: none; }
+
+    /* ========================================
+       ANNOUNCEMENT BAR
+       ======================================== */
+    .announcement-bar {
+      background: var(--blood);
+      padding: 0.75rem 1rem;
+      text-align: center;
+      position: relative;
+      z-index: 1001;
+    }
+
+    .announcement-bar p {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .announcement-bar a {
+      color: var(--bone);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ========================================
+       CATEGORIES SECTION
+       ======================================== */
+    .categories {
+      position: relative;
+      z-index: 10;
+      padding: 6rem 2rem;
+    }
+
+    .section-divider {
+      width: 100%;
+      height: 80px;
+      background: url('src/img/03-section-divider_gothic-iron-fence_tileable_transparent.png') center center / auto 100% repeat-x;
+      opacity: 0.6;
+      margin: 2rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-label {
+      font-family: 'Crimson Text', serif;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--blood);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .category-card {
+      position: relative;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      cursor: none;
+      border: 1px solid rgba(232, 220, 196, 0.1);
+    }
+
+    .category-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+        rgba(10, 10, 12, 0.95) 0%,
+        rgba(10, 10, 12, 0.4) 40%,
+        transparent 100%
+      );
+      z-index: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    .category-card:hover::before {
+      opacity: 0.7;
+    }
+
+    .category-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease, filter 0.4s ease;
+      filter: saturate(0.8);
+    }
+
+    .category-card:hover .category-image {
+      transform: scale(1.08);
+      filter: saturate(1);
+    }
+
+    .category-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      z-index: 2;
+      transform: translateY(20px);
+      transition: transform 0.4s ease;
+    }
+
+    .category-card:hover .category-content {
+      transform: translateY(0);
+    }
+
+    .category-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      transform-origin: top center;
+    }
+
+    .category-count {
+      font-family: 'Crimson Text', serif;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--bone-dark);
+      opacity: 0;
+      transition: opacity 0.4s ease 0.1s;
+    }
+
+    .category-card:hover .category-count {
+      opacity: 1;
+    }
+
+    .category-arrow {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--blood);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 0.4s ease;
+    }
+
+    .category-card:hover .category-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .category-arrow svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--bone);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* ========================================
+       FEATURED PRODUCTS SECTION
+       ======================================== */
+    .featured {
+      position: relative;
+      z-index: 10;
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, transparent 0%, rgba(139, 0, 0, 0.03) 50%, transparent 100%);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      position: relative;
+      background: var(--shadow);
+      border: 1px solid rgba(232, 220, 196, 0.08);
+      overflow: hidden;
+      cursor: none;
+      transition: all 0.4s ease;
+    }
+
+    .product-card:hover {
+      border-color: rgba(139, 0, 0, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 10;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.8rem;
+      background: var(--blood);
+    }
+
+    .product-badge--new {
+      background: var(--moss);
+    }
+
+    .product-badge--exclusive {
+      background: linear-gradient(135deg, #B8860B 0%, #FFD700 50%, #B8860B 100%);
+      color: var(--midnight);
+    }
+
+    .product-image-wrapper {
+      position: relative;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: #1a1a1d;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+
+    .product-quick-view {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--bone);
+      background: rgba(10, 10, 12, 0.9);
+      border: 1px solid var(--blood);
+      padding: 0.75rem 1.5rem;
+      opacity: 0;
+      transition: all 0.4s ease;
+      cursor: none;
+      z-index: 5;
+    }
+
+    .product-card:hover .product-quick-view {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product-brand {
+      font-family: 'Crimson Text', serif;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--blood);
+      margin-bottom: 0.25rem;
+    }
+
+    .product-name {
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .product-price {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .price-current {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--bone);
+    }
+
+    .price-original {
+      font-family: 'Crimson Text', serif;
+      font-size: 0.9rem;
+      color: var(--bone-dark);
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    /* ========================================
+       SALE BANNER WITH BLOOD DRIPS
+       ======================================== */
+    .sale-banner {
+      position: relative;
+      z-index: 10;
+      padding: 5rem 2rem;
+      margin: 4rem 2rem;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      background: url('src/img/372e6fee-c78f-41ea-bfe8-499e0c420d22.png') center center / cover;
+      border: 3px solid rgba(139, 0, 0, 0.6);
+      box-shadow: 0 0 60px rgba(139, 0, 0, 0.4), inset 0 0 100px rgba(0,0,0,0.5);
+    }
+
+    .sale-banner__title,
+    .sale-banner__subtitle,
+    .sale-banner__label {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .sale-banner__label {
+      font-family: 'Crimson Text', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--blood-bright);
+      margin-bottom: 0.5rem;
+    }
+
+    .sale-banner__title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .sale-banner__subtitle {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.3rem;
+      color: var(--bone-dark);
+      margin-bottom: 2rem;
+    }
+
+    .sale-banner__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--midnight);
+      background: var(--bone);
+      border: none;
+      padding: 1.25rem 3rem;
+      cursor: none;
+      transition: all 0.4s ease;
+      text-decoration: none;
+    }
+
+    .sale-banner__cta:hover {
+      background: var(--blood-bright);
+      color: var(--bone);
+    }
+
+    /* ========================================
+       BRANDS SECTION
+       ======================================== */
+    .brands {
+      position: relative;
+      z-index: 10;
+      padding: 4rem 2rem;
+      border-top: 1px solid rgba(232, 220, 196, 0.1);
+      border-bottom: 1px solid rgba(232, 220, 196, 0.1);
+    }
+
+    .brands-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brands-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--bone-dark);
+      margin-bottom: 2rem;
+    }
+
+    .brands-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+      opacity: 0.6;
+    }
+
+    .brands-logos span {
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--bone-dark);
+      white-space: nowrap;
+    }
+
+    /* ========================================
+       ABOUT SECTION
+       ======================================== */
+    .about {
+      position: relative;
+      z-index: 10;
+      padding: 8rem 2rem;
+    }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-image-wrapper {
+      position: relative;
+    }
+
+    .about-image {
+      width: 100%;
+      height: auto;
+      border: 2px solid rgba(139, 0, 0, 0.3);
+    }
+
+    .about-image-frame {
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: 15px;
+      bottom: 15px;
+      border: 1px solid rgba(232, 220, 196, 0.2);
+      pointer-events: none;
+    }
+
+    .about-content {
+      padding: 2rem 0;
+    }
+
+    .about-label {
+      font-family: 'Crimson Text', serif;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--blood);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .about-text {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.1rem;
+      color: var(--bone-dark);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-link {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--bone);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .about-link:hover {
+      color: var(--blood-bright);
+    }
+
+    .about-link svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* ========================================
+       NEWSLETTER SECTION
+       ======================================== */
+    .newsletter {
+      position: relative;
+      z-index: 10;
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+
+    .newsletter-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 5rem 4rem;
+      border: 2px solid rgba(139, 0, 0, 0.5);
+      position: relative;
+      background: url('src/img/05-newsletter-background_ancient-crypt.webp') center center / cover;
+      box-shadow: 0 0 80px rgba(0,0,0,0.8), inset 0 0 150px rgba(0,0,0,0.6);
+    }
+
+    .newsletter-inner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10,10,12,0.5);
+      z-index: 0;
+    }
+
+    .newsletter-title,
+    .newsletter-text,
+    .newsletter-form {
+      position: relative;
+      z-index: 1;
+    }
+
+    .newsletter-title {
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    }
+
+    .newsletter-inner::before {
+      content: '☠';
+      position: absolute;
+      top: -0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      color: var(--blood);
+      background: var(--midnight);
+      padding: 0 1rem;
+    }
+
+    .newsletter-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-text {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--bone-dark);
+      margin-bottom: 2rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      border: 1px solid rgba(232, 220, 196, 0.2);
+    }
+
+    .newsletter-input {
+      flex: 1;
+      font-family: 'Crimson Text', serif;
+      font-size: 1rem;
+      padding: 1rem 1.5rem;
+      background: transparent;
+      border: none;
+      color: var(--bone);
+      outline: none;
+      cursor: text;
+    }
+
+    .newsletter-input::placeholder {
+      color: var(--bone-dark);
+      opacity: 0.5;
+    }
+
+    .newsletter-button {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      background: var(--blood);
+      color: var(--bone);
+      border: none;
+      cursor: none;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter-button:hover {
+      background: var(--blood-bright);
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    footer {
+      position: relative;
+      z-index: 10;
+      padding: 4rem 2rem 2rem;
+      border-top: 1px solid rgba(232, 220, 196, 0.1);
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr repeat(3, 1fr);
+      gap: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-brand {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.2rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .footer-desc {
+      font-family: 'Crimson Text', serif;
+      font-size: 0.95rem;
+      color: var(--bone-dark);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+
+    .footer-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blood);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      font-family: 'Crimson Text', serif;
+      font-size: 0.95rem;
+      color: var(--bone-dark);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--bone);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(232, 220, 196, 0.1);
+    }
+
+    .footer-copy {
+      font-family: 'Crimson Text', serif;
+      font-size: 0.85rem;
+      color: var(--bone-dark);
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-socials a {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(232, 220, 196, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .footer-socials a:hover {
+      border-color: var(--blood);
+      background: var(--blood);
+    }
+
+    .footer-socials svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--bone-dark);
+      transition: fill 0.3s ease;
+    }
+
+    .footer-socials a:hover svg {
+      fill: var(--bone);
+    }
+
+    /* ========================================
+       CANDLE EFFECT
+       ======================================== */
+    .candle {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 8px;
+      height: 20px;
+      background: linear-gradient(to top, var(--rust), var(--candle));
+      border-radius: 0 0 4px 4px;
+      z-index: 100;
+    }
+
+    .candle::before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 12px;
+      background: radial-gradient(ellipse at center bottom, var(--candle) 0%, #FF6B00 40%, transparent 70%);
+      border-radius: 50% 50% 20% 20%;
+      animation: candleFlicker 0.5s ease-in-out infinite alternate;
+    }
+
+    .candle::after {
+      content: '';
+      position: absolute;
+      bottom: calc(100% + 5px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle, var(--candle-glow) 0%, transparent 70%);
+      animation: candleGlow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes candleFlicker {
+      0%, 100% { transform: translateX(-50%) scaleY(1); opacity: 1; }
+      25% { transform: translateX(-50%) scaleY(1.1) skewX(2deg); opacity: 0.9; }
+      50% { transform: translateX(-50%) scaleY(0.9) skewX(-1deg); opacity: 1; }
+      75% { transform: translateX(-50%) scaleY(1.05) skewX(1deg); opacity: 0.95; }
+    }
+
+    @keyframes candleGlow {
+      from { opacity: 0.3; transform: translateX(-50%) scale(1); }
+      to { opacity: 0.5; transform: translateX(-50%) scale(1.1); }
+    }
+
+    /* ========================================
+       SCROLL REVEAL
+       ======================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========================================
+       RESPONSIVE
+       ======================================== */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-image-wrapper {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .announcement-bar p {
+        font-size: 0.65rem;
+      }
+
+      header {
+        padding: 1rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 80vh;
+        padding: 5rem 1rem 3rem;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-tagline {
+        font-size: 1.1rem;
+      }
+
+      .categories,
+      .featured,
+      .newsletter,
+      .about {
+        padding: 4rem 1rem;
+      }
+
+      .sale-banner {
+        margin: 2rem 1rem;
+        padding: 3rem 1.5rem;
+      }
+
+      .newsletter-inner {
+        padding: 2rem;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .frame-corner {
+        display: none;
+      }
+
+      .brands-logos {
+        gap: 2rem;
+      }
+
+      .about-title {
+        font-size: 1.8rem;
+      }
+
+      .sound-toggle {
+        bottom: 1rem;
+        left: 1rem;
+        width: 36px;
+        height: 36px;
+      }
+
+      .candle {
+        bottom: 1rem;
+        right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Lightning Overlay -->
+  <div class="lightning-overlay" id="lightning"></div>
+
+  <!-- Particles Container -->
+  <div class="particles-container" id="particles"></div>
+
+  <!-- Falling Leaves -->
+  <div class="leaves-container" id="leaves"></div>
+
+  <!-- Atmosphere -->
+  <div class="atmosphere"></div>
+
+  <!-- Parallax Graveyard -->
+  <div class="parallax-graveyard">
+    <div class="parallax-layer parallax-layer--trees"></div>
+    <div class="parallax-layer parallax-layer--tombstones"></div>
+    <div class="parallax-layer parallax-layer--fence"></div>
+  </div>
+
+  <!-- Fog -->
+  <div class="fog">
+    <div class="fog-layer"></div>
+    <div class="fog-layer"></div>
+  </div>
+
+  <!-- Flying Product (for add to cart animation) -->
+  <img class="flying-product" id="flying-product" src="" alt="">
+  <div class="cart-ghost" id="cart-ghost">👻</div>
+
+  <!-- Sound Toggle -->
+  <button class="sound-toggle muted" id="sound-toggle" aria-label="Toggle ambient sound">
+    <svg viewBox="0 0 24 24">
+      <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+      <path class="sound-wave" d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+      <path class="sound-wave" d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+    </svg>
+  </button>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>🎃 Free Shipping on Orders Over $75 | <a href="#">Shop Halloween 2026 Collection</a></p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        Lord Grimley's
+        <span>Manor of Horrors</span>
+      </a>
+
+      <nav>
+        <a href="#">New Arrivals</a>
+        <a href="#">Masks</a>
+        <a href="#">Props</a>
+        <a href="#">Collectibles</a>
+        <a href="#">Ornaments</a>
+        <a href="#">Sale</a>
+      </nav>
+
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Search products">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="Account">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </button>
+        <button class="nav-icon-btn cart-count" id="cart-icon" data-count="0" aria-label="Shopping cart, 0 items">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+            <path d="M3 6h18"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+        </button>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-zombie-hands"></div>
+    <div class="frame-corner tl"></div>
+    <div class="frame-corner tr"></div>
+    <div class="frame-corner bl"></div>
+    <div class="frame-corner br"></div>
+
+    <!-- Watching Eyes -->
+    <div class="eyes-container" id="eyes-container">
+      <div class="eye" style="top: 15%; left: 8%;"></div>
+      <div class="eye" style="top: 25%; right: 12%;"></div>
+      <div class="eye" style="top: 60%; left: 5%;"></div>
+      <div class="eye" style="top: 70%; right: 8%;"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-ornament"></div>
+      <p class="hero-subtitle">Est. Since the Darkness Began</p>
+      <h1 class="hero-title flicker-slow">Lord Grimley's Manor</h1>
+      <p class="hero-tagline">"Where Nightmares Become Reality"</p>
+      <a href="#categories" class="hero-cta bleed-btn">
+        Explore the Crypt
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+        <div class="blood-drips">
+          <div class="btn-drip"></div>
+          <div class="btn-drip"></div>
+          <div class="btn-drip"></div>
+          <div class="btn-drip"></div>
+          <div class="btn-drip"></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
+  <!-- Categories Section -->
+  <main id="main-content">
+  <section class="categories" id="categories">
+    <div class="section-header reveal">
+      <p class="section-label">Dare to explore</p>
+      <h2 class="section-title">The Collection</h2>
+    </div>
+
+    <div class="category-grid">
+      <article class="category-card reveal">
+        <img src="old_site/Lord-Grimley-Mask-Category-Halloween-2026.webp" alt="Premium Latex Halloween Masks - Zombies, Demons, Creatures" class="category-image" loading="lazy">
+        <div class="category-content">
+          <h3 class="category-name creaking-sign">Latex Masks</h3>
+          <p class="category-count">143 horrors await</p>
+        </div>
+        <div class="category-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </article>
+
+      <article class="category-card reveal">
+        <img src="old_site/Clowns-Lord-Grimleys-Manor-2025-web.webp" alt="Horror Props and Haunted House Decorations" class="category-image" loading="lazy">
+        <div class="category-content">
+          <h3 class="category-name creaking-sign">Props & Decor</h3>
+          <p class="category-count">87 terrors lurk</p>
+        </div>
+        <div class="category-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </article>
+
+      <article class="category-card reveal">
+        <img src="old_site/Trick-Or-Treat-Studios-Killer-Klowns-From-Outer-Space-Lord-Grimley.webp" alt="Horror Movie Collectibles - Killer Klowns, Gremlins, More" class="category-image" loading="lazy">
+        <div class="category-content">
+          <h3 class="category-name creaking-sign">Collectibles</h3>
+          <p class="category-count">56 treasures hidden</p>
+        </div>
+        <div class="category-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </article>
+
+      <article class="category-card reveal">
+        <img src="old_site/Lord-Grimley-Halloween-Ornament-Category-2026.webp" alt="Halloween Ornaments and Seasonal Decorations" class="category-image" loading="lazy">
+        <div class="category-content">
+          <h3 class="category-name creaking-sign">Ornaments</h3>
+          <p class="category-count">34 festive frights</p>
+        </div>
+        <div class="category-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </article>
+
+      <article class="category-card reveal">
+        <img src="old_site/Accessory-Category-2020.webp" alt="Halloween Costume Accessories - Gloves, Hands, Feet" class="category-image" loading="lazy">
+        <div class="category-content">
+          <h3 class="category-name creaking-sign">Accessories</h3>
+          <p class="category-count">62 finishing touches</p>
+        </div>
+        <div class="category-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </article>
+
+      <article class="category-card reveal">
+        <img src="old_site/Exclusive-Lord-Grimley-Mask-Category-Halloween-2026.webp" alt="Lord Grimley Exclusive Limited Edition Masks" class="category-image" loading="lazy">
+        <div class="category-content">
+          <h3 class="category-name creaking-sign">Lord Grimley Exclusives</h3>
+          <p class="category-count">12 rare specimens</p>
+        </div>
+        <div class="category-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sale Banner with Blood Drips -->
+  <section class="sale-banner blood-frame--ornate reveal" id="sale-banner">
+    <p class="sale-banner__label">Limited Time Only</p>
+    <h2 class="sale-banner__title flicker-slow">Clearance Crypt</h2>
+    <p class="sale-banner__subtitle">Up to 50% off select masks, props & collectibles</p>
+    <a href="#" class="sale-banner__cta bleed-btn">
+      Shop the Sale
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+      <div class="blood-drips">
+        <div class="btn-drip"></div>
+        <div class="btn-drip"></div>
+        <div class="btn-drip"></div>
+        <div class="btn-drip"></div>
+        <div class="btn-drip"></div>
+      </div>
+    </a>
+
+    <!-- Blood Drip Container -->
+    <div class="blood-drip-container" id="sale-drips"></div>
+  </section>
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
+  <!-- Featured Products -->
+  <section class="featured">
+    <div class="section-header reveal">
+      <p class="section-label">Fresh from the grave</p>
+      <h2 class="section-title">New Arrivals</h2>
+    </div>
+
+    <div class="products-grid">
+      <article class="product-card reveal" data-product-id="1">
+        <span class="product-badge">Sale</span>
+        <div class="product-image-wrapper">
+          <img src="old_site/Texas_Chainsaw_Leatherface_2023.webp" alt="Texas Chainsaw Massacre Leatherface Deluxe Latex Mask by Trick or Treat Studios" class="product-image" loading="lazy">
+          <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">Trick or Treat Studios</p>
+          <h3 class="product-name">Texas Chainsaw Massacre - Leatherface Deluxe Mask</h3>
+          <div class="product-price">
+            <span class="price-current">$74.99</span>
+            <span class="price-original">$89.99</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product-id="2">
+        <span class="product-badge product-badge--new">New</span>
+        <div class="product-image-wrapper">
+          <img src="old_site/Beetlejuice_Order_2025.webp" alt="Beetlejuice Movie Deluxe Latex Mask with Hair by Trick or Treat Studios" class="product-image" loading="lazy">
+          <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">Trick or Treat Studios</p>
+          <h3 class="product-name">Beetlejuice - Deluxe Latex Mask with Hair</h3>
+          <div class="product-price">
+            <span class="price-current">$89.99</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product-id="3">
+        <span class="product-badge product-badge--new">New</span>
+        <div class="product-image-wrapper">
+          <img src="old_site/Trick-Or-Treat-Studios-Gremlins-2-New-Batch-Mogwai-Puppets01.webp" alt="Gremlins 2 The New Batch Mogwai Hand Puppet Collection by Trick or Treat Studios" class="product-image" loading="lazy">
+          <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">Trick or Treat Studios</p>
+          <h3 class="product-name">Gremlins 2 - Mogwai Puppet Collection</h3>
+          <div class="product-price">
+            <span class="price-current">$199.99</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product-id="4">
+        <span class="product-badge product-badge--exclusive">Exclusive</span>
+        <div class="product-image-wrapper">
+          <img src="old_site/Lord-Grimley-New-Mask-Category-Halloween-2026.webp" alt="Lord Grimley Manor Exclusive 2026 Premium Latex Mask Collection" class="product-image" loading="lazy">
+          <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">Lord Grimley Exclusive</p>
+          <h3 class="product-name">2026 Collection - Premium Latex Masks</h3>
+          <div class="product-price">
+            <span class="price-current">From $59.99</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product-id="5">
+        <div class="product-image-wrapper">
+          <img src="old_site/Trick-Or-Treat-Studios-Killer-Klowns-From-Outer-Space-Lord-Grimley.webp" alt="Killer Klowns from Outer Space Collectible Figure by Trick or Treat Studios" class="product-image" loading="lazy">
+          <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">Trick or Treat Studios</p>
+          <h3 class="product-name">Killer Klowns from Outer Space - Deluxe Figure</h3>
+          <div class="product-price">
+            <span class="price-current">$149.99</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product-id="6">
+        <div class="product-image-wrapper">
+          <img src="old_site/Effects-Category-2020.webp" alt="Halloween Special Effects Makeup and Prosthetics" class="product-image" loading="lazy">
+          <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">Special Effects</p>
+          <h3 class="product-name">Professional FX Makeup Collection</h3>
+          <div class="product-price">
+            <span class="price-current">From $14.99</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product-id="7">
+        <span class="product-badge">Sale</span>
+        <div class="product-image-wrapper">
+          <img src="old_site/Lord-Grimley-Halloween-Ornament-Category-2026.webp" alt="Halloween Horror Ornaments Collection" class="product-image" loading="lazy">
+          <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">Lord Grimley's Manor</p>
+          <h3 class="product-name">Halloween Horror Ornaments - 2026 Collection</h3>
+          <div class="product-price">
+            <span class="price-current">$12.99</span>
+            <span class="price-original">$16.99</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product-id="8">
+        <div class="product-image-wrapper">
+          <img src="old_site/Clowns-Lord-Grimleys-Manor-2025-web.webp" alt="Evil Clown Masks and Props Collection" class="product-image" loading="lazy">
+          <button class="product-quick-view" data-action="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">Various Brands</p>
+          <h3 class="product-name">Evil Clown Collection - Masks & Props</h3>
+          <div class="product-price">
+            <span class="price-current">From $39.99</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+  <section class="brands reveal">
+    <div class="brands-inner">
+      <p class="brands-title">Authorized Retailer For</p>
+      <div class="brands-logos">
+        <span>Trick or Treat Studios</span>
+        <span>Ghoulish Productions</span>
+        <span>Distortions Unlimited</span>
+        <span>Composite Effects</span>
+        <span>Don Post</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-inner">
+      <div class="about-image-wrapper reveal">
+        <img src="src/img/08-loading-splash_logo-embossed-on-book.webp" alt="Lord Grimley - Proprietor of Lord Grimley's Manor Horror Collectibles" class="about-image">
+        <div class="about-image-frame"></div>
+      </div>
+      <div class="about-content reveal">
+        <p class="about-label">Since the darkness began</p>
+        <h2 class="about-title">Welcome to the Manor</h2>
+        <p class="about-text">
+          Lord Grimley's Manor has been the premier destination for horror enthusiasts and Halloween aficionados seeking only the finest latex masks, movie-accurate props, and rare collectibles.
+        </p>
+        <p class="about-text">
+          Each piece in our collection is hand-selected by Lord Grimley himself, ensuring that only the most terrifying, highest-quality items make it into our crypt. From licensed Trick or Treat Studios masterpieces to our own exclusive creations, we offer nightmares you simply won't find anywhere else.
+        </p>
+        <a href="#" class="about-link bleed-btn">
+          Read Our Story
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <div class="blood-drips">
+            <div class="btn-drip"></div>
+            <div class="btn-drip"></div>
+            <div class="btn-drip"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="newsletter-inner blood-frame reveal">
+      <h2 class="newsletter-title">Join the Crypt</h2>
+      <p class="newsletter-text">Be the first to know when new horrors arrive. Exclusive deals for members of the manor.</p>
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+        <button type="submit" class="newsletter-button bleed-btn">
+          Subscribe
+          <div class="blood-drips">
+            <div class="btn-drip"></div>
+            <div class="btn-drip"></div>
+            <div class="btn-drip"></div>
+          </div>
+        </button>
+      </form>
+
+      <!-- Blood Drip Container -->
+      <div class="blood-drip-container" id="newsletter-drips"></div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Lord Grimley's Manor</div>
+          <p class="footer-desc">Purveyors of fine horror masks, props, and collectibles. Every nightmare, hand-selected for true horror aficionados.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Latex Masks</a></li>
+            <li><a href="#">Props & Decor</a></li>
+            <li><a href="#">Collectibles</a></li>
+            <li><a href="#">Ornaments</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Information</h4>
+          <ul class="footer-links">
+            <li><a href="#">About the Manor</a></li>
+            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Lord Grimley's Manor. All nightmares reserved.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Candle Effect -->
+  <div class="candle"></div>
+
+  <!-- Ambient Audio -->
+  <audio id="ambient-audio" loop preload="none">
+    <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=" type="audio/wav">
+  </audio>
+
+  <script>
+    // ========================================
+    // FLOATING PARTICLES
+    // ========================================
+    const particlesContainer = document.getElementById('particles');
+
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+
+      const types = ['dust', 'dust', 'dust', 'ember', 'fog'];
+      const type = types[Math.floor(Math.random() * types.length)];
+      particle.classList.add(`particle--${type}`);
+
+      const size = type === 'fog' ? 30 + Math.random() * 50 : 2 + Math.random() * 4;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.setProperty('--drift', (Math.random() - 0.5) * 200 + 'px');
+      particle.style.animationDuration = (15 + Math.random() * 20) + 's';
+      particle.style.animationDelay = Math.random() * 10 + 's';
+
+      particlesContainer.appendChild(particle);
+
+      setTimeout(() => particle.remove(), 35000);
+    }
+
+    // Create initial particles
+    for (let i = 0; i < 30; i++) {
+      setTimeout(createParticle, i * 200);
+    }
+
+    // Continuously create particles
+    setInterval(createParticle, 800);
+
+    // ========================================
+    // WATCHING EYES
+    // ========================================
+    const eyes = document.querySelectorAll('.eye');
+
+    document.addEventListener('mousemove', (e) => {
+      eyes.forEach(eye => {
+        const rect = eye.getBoundingClientRect();
+        const eyeCenterX = rect.left + rect.width / 2;
+        const eyeCenterY = rect.top + rect.height / 2;
+
+        const angle = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
+        const distance = Math.min(4, Math.hypot(e.clientX - eyeCenterX, e.clientY - eyeCenterY) / 50);
+
+        const pupilX = Math.cos(angle) * distance;
+        const pupilY = Math.sin(angle) * distance;
+
+        const pupil = eye.querySelector('::before') || eye;
+        eye.style.setProperty('--pupil-x', pupilX + 'px');
+        eye.style.setProperty('--pupil-y', pupilY + 'px');
+
+        // Update the ::before pseudo-element via CSS custom properties
+        eye.style.cssText = `
+          top: ${eye.style.top};
+          left: ${eye.style.left};
+          right: ${eye.style.right};
+        `;
+        eye.querySelector
+      });
+
+      // Direct DOM manipulation for eye pupils
+      eyes.forEach(eye => {
+        const rect = eye.getBoundingClientRect();
+        const eyeCenterX = rect.left + rect.width / 2;
+        const eyeCenterY = rect.top + rect.height / 2;
+        const angle = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
+        const distance = Math.min(3, Math.hypot(e.clientX - eyeCenterX, e.clientY - eyeCenterY) / 80);
+        const pupilX = Math.cos(angle) * distance;
+        const pupilY = Math.sin(angle) * distance;
+
+        eye.style.setProperty('--pupil-x', pupilX + 'px');
+        eye.style.setProperty('--pupil-y', pupilY + 'px');
+      });
+    });
+
+    // Add CSS for eye pupil movement
+    const eyeStyle = document.createElement('style');
+    eyeStyle.textContent = `
+      .eye::before {
+        transform: translate(calc(-50% + var(--pupil-x, 0px)), calc(-50% + var(--pupil-y, 0px))) !important;
+      }
+    `;
+    document.head.appendChild(eyeStyle);
+
+    // ========================================
+    // LIGHTNING EFFECT
+    // ========================================
+    const lightning = document.getElementById('lightning');
+
+    function triggerLightning() {
+      lightning.classList.add('flash');
+      setTimeout(() => lightning.classList.remove('flash'), 200);
+
+      // Random next lightning
+      const nextDelay = 5000 + Math.random() * 20000;
+      setTimeout(triggerLightning, nextDelay);
+    }
+
+    // Start lightning after initial delay
+    setTimeout(triggerLightning, 3000);
+
+    // ========================================
+    // PARALLAX GRAVEYARD
+    // ========================================
+    const parallaxLayers = document.querySelectorAll('.parallax-layer');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.pageYOffset;
+      parallaxLayers.forEach((layer, index) => {
+        const speed = 0.1 + (index * 0.05);
+        layer.style.transform = `translateX(${-scrollY * speed}px)`;
+      });
+    });
+
+    // ========================================
+    // ADD TO CART ANIMATION
+    // ========================================
+    const flyingProduct = document.getElementById('flying-product');
+    const cartGhost = document.getElementById('cart-ghost');
+    const cartIcon = document.getElementById('cart-icon');
+    let cartCount = 0;
+
+    document.querySelectorAll('[data-action="add-to-cart"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const card = btn.closest('.product-card');
+        const img = card.querySelector('.product-image');
+        const rect = img.getBoundingClientRect();
+        const cartRect = cartIcon.getBoundingClientRect();
+
+        // Clone image for flying effect
+        flyingProduct.src = img.src;
+        flyingProduct.style.left = rect.left + rect.width / 2 - 30 + 'px';
+        flyingProduct.style.top = rect.top + rect.height / 2 - 30 + 'px';
+
+        // Calculate end position
+        const endX = cartRect.left + cartRect.width / 2 - 30;
+        const endY = cartRect.top + cartRect.height / 2 - 30;
+
+        flyingProduct.style.setProperty('--end-x', endX + 'px');
+        flyingProduct.style.setProperty('--end-y', endY + 'px');
+
+        // Trigger animation
+        flyingProduct.classList.add('animate');
+
+        // Ghost wisp at cart
+        setTimeout(() => {
+          cartGhost.style.left = cartRect.left + 'px';
+          cartGhost.style.top = cartRect.top + 'px';
+          cartGhost.classList.add('animate');
+
+          // Update cart count
+          cartCount++;
+          cartIcon.setAttribute('data-count', cartCount);
+          cartIcon.classList.add('bump');
+
+          setTimeout(() => {
+            cartIcon.classList.remove('bump');
+            cartGhost.classList.remove('animate');
+          }, 400);
+        }, 600);
+
+        setTimeout(() => {
+          flyingProduct.classList.remove('animate');
+        }, 800);
+      });
+    });
+
+    // Flying product keyframes update
+    const flyStyle = document.createElement('style');
+    flyStyle.textContent = `
+      @keyframes flyToCart {
+        0% {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0.1) rotate(360deg) translate(
+            calc(var(--end-x) - var(--start-x, 0px)),
+            calc(var(--end-y) - var(--start-y, 0px))
+          );
+          left: var(--end-x);
+          top: var(--end-y);
+        }
+      }
+    `;
+    document.head.appendChild(flyStyle);
+
+    // ========================================
+    // SOUND TOGGLE
+    // ========================================
+    const soundToggle = document.getElementById('sound-toggle');
+    const ambientAudio = document.getElementById('ambient-audio');
+    let soundEnabled = false;
+
+    // For demo purposes, we'll create a simple oscillator-based ambient sound
+    let audioContext, oscillator, gainNode;
+
+    soundToggle.addEventListener('click', () => {
+      soundEnabled = !soundEnabled;
+      soundToggle.classList.toggle('muted', !soundEnabled);
+
+      if (soundEnabled) {
+        // Create audio context on user interaction
+        if (!audioContext) {
+          audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          gainNode = audioContext.createGain();
+          gainNode.gain.value = 0.03;
+          gainNode.connect(audioContext.destination);
+        }
+
+        // Create spooky ambient drone
+        oscillator = audioContext.createOscillator();
+        oscillator.type = 'sine';
+        oscillator.frequency.value = 55; // Low drone
+        oscillator.connect(gainNode);
+        oscillator.start();
+
+        // Add subtle modulation
+        const lfo = audioContext.createOscillator();
+        lfo.frequency.value = 0.2;
+        const lfoGain = audioContext.createGain();
+        lfoGain.gain.value = 5;
+        lfo.connect(lfoGain);
+        lfoGain.connect(oscillator.frequency);
+        lfo.start();
+      } else {
+        if (oscillator) {
+          oscillator.stop();
+          oscillator = null;
+        }
+      }
+    });
+
+    // ========================================
+    // FALLING LEAVES
+    // ========================================
+    const leavesContainer = document.getElementById('leaves');
+
+    function createLeaf() {
+      const leaf = document.createElement('div');
+      leaf.className = 'leaf';
+      leaf.innerHTML = `<svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>`;
+
+      leaf.style.left = Math.random() * 100 + '%';
+      leaf.style.setProperty('--leaf-drift', (Math.random() - 0.5) * 200 + 'px');
+      leaf.style.animationDuration = (8 + Math.random() * 8) + 's';
+      leaf.style.animationDelay = Math.random() * 5 + 's';
+      leaf.style.transform = `scale(${0.5 + Math.random() * 0.5})`;
+
+      leavesContainer.appendChild(leaf);
+
+      setTimeout(() => leaf.remove(), 20000);
+    }
+
+    // Create leaves periodically
+    setInterval(createLeaf, 2000);
+    for (let i = 0; i < 5; i++) {
+      setTimeout(createLeaf, i * 400);
+    }
+
+    // ========================================
+    // BLOOD DRIP GENERATOR
+    // ========================================
+    function createBloodDrips(containerId, count = 10) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
+      function createDrop() {
+        const drop = document.createElement('div');
+        drop.className = 'blood-drop';
+
+        const size = 3 + Math.random() * 5;
+        const x = Math.random() * 100;
+        const delay = Math.random() * 3;
+        const duration = 2 + Math.random() * 1.5;
+        const trailHeight = size * 2 + Math.random() * size;
+
+        drop.style.cssText = `
+          left: ${x}%;
+          --size: ${size}px;
+          --delay: ${delay}s;
+          --duration: ${duration}s;
+          --trail-height: ${trailHeight}px;
+        `;
+
+        drop.innerHTML = `
+          <div class="blood-drop__trail"></div>
+          <div class="blood-drop__body"></div>
+        `;
+
+        return drop;
+      }
+
+      for (let i = 0; i < count; i++) {
+        container.appendChild(createDrop());
+      }
+
+      setInterval(() => {
+        const drops = container.querySelectorAll('.blood-drop');
+        if (drops.length > 0) {
+          const randomIndex = Math.floor(Math.random() * drops.length);
+          drops[randomIndex].remove();
+          container.appendChild(createDrop());
+        }
+      }, 2000);
+    }
+
+    createBloodDrips('sale-drips', 12);
+    createBloodDrips('newsletter-drips', 8);
+
+    // ========================================
+    // SCROLL EFFECTS
+    // ========================================
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 80);
+        }
+      });
+    }, observerOptions);
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Hero parallax
+    const heroContent = document.querySelector('.hero-content');
+    window.addEventListener('scroll', () => {
+      const scroll = window.pageYOffset;
+      if (scroll < window.innerHeight && heroContent) {
+        heroContent.style.transform = `translateY(${scroll * 0.15}px)`;
+        heroContent.style.opacity = 1 - (scroll / window.innerHeight) * 0.5;
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ========================================
+    // INITIALIZE
+    // ========================================
+    console.log('🎃 Lord Grimley\'s Manor loaded. Enter if you dare...');
+  </script>
+
+  <!-- Zombie Scratch & Texture Effects -->
+  <script src="effects.js"></script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lord Grimley's Manor",
+    "url": "https://www.lordgrimley.com",
+    "logo": "https://www.lordgrimley.com/src/img/08-loading-splash_logo-embossed-on-book.webp",
+    "description": "Premium Halloween masks, horror movie props, and exclusive collectibles. Authorized retailer of Trick or Treat Studios.",
+    "slogan": "Where Nightmares Become Reality",
+    "email": "support@lordgrimley.com",
+    "telephone": "+1-555-123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Haunted Lane",
+      "addressLocality": "Creepsville",
+      "addressRegion": "PA",
+      "postalCode": "13131",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.facebook.com/lordgrimleysmanor",
+      "https://www.instagram.com/lordgrimleysmanor",
+      "https://www.youtube.com/lordgrimleysmanor",
+      "https://www.tiktok.com/@lordgrimleysmanor"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lord Grimley's Manor",
+    "url": "https://www.lordgrimley.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.lordgrimley.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Lord Grimley's Manor",
+    "description": "Premium Halloween masks, horror props, and collectibles",
+    "url": "https://www.lordgrimley.com",
+    "priceRange": "$-$$$",
+    "openingHours": ["Mo-Fr 09:00-17:00", "Sa 10:00-16:00"],
+    "paymentAccepted": ["Credit Card", "PayPal", "Apple Pay", "Google Pay"],
+    "currenciesAccepted": "USD"
+  }
+  </script>
+</body>
+</html>

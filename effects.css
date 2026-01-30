@@ -1,0 +1,280 @@
+/* ========================================
+   ZOMBIE HAND SCRATCH EFFECT
+   ======================================== */
+.scratch-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99990;
+  overflow: hidden;
+}
+
+.scratch {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transform-origin: center;
+}
+
+.scratch svg {
+  width: 100%;
+  height: 100%;
+}
+
+.scratch.animate {
+  animation: scratchAppear 0.8s ease-out forwards;
+}
+
+@keyframes scratchAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+  }
+  40% {
+    transform: scale(1) rotate(-2deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Zombie Hand Cursor on Click */
+.cursor-zombie-hand {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  transition: opacity 0.1s ease;
+  filter: drop-shadow(0 0 10px rgba(139, 0, 0, 0.5));
+}
+
+.cursor-zombie-hand.slashing {
+  opacity: 1;
+  animation: zombieSlash 0.3s ease-out forwards;
+}
+
+@keyframes zombieSlash {
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-30%, -30%) rotate(15deg) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-20%, -20%) rotate(30deg) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Blood Splatter on Scratch */
+.blood-splatter {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.blood-splatter.animate {
+  animation: splatterAppear 1s ease-out forwards;
+}
+
+@keyframes splatterAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  20% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* ========================================
+   ENHANCED SVG BACKGROUND TEXTURES
+   ======================================== */
+
+/* Cobweb Corners */
+.cobweb-corner {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.15;
+  filter: drop-shadow(0 0 2px rgba(232, 220, 196, 0.3));
+}
+
+.cobweb-corner--tl {
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.cobweb-corner--tr {
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  transform: scaleX(-1);
+}
+
+.cobweb-corner--bl {
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  transform: scaleY(-1);
+}
+
+.cobweb-corner--br {
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  transform: scale(-1, -1);
+}
+
+/* Subtle Crack Texture Overlay */
+.crack-texture {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cpath fill='none' stroke='%23E8DCC4' stroke-width='0.5' d='M50 0 L55 50 L45 100 L60 150 L40 200 M150 0 L145 40 L155 80 L140 120 L160 160 L145 200 M250 0 L260 60 L245 120 L255 180 L240 240 M350 0 L340 50 L355 100 L345 150 L360 200 M0 100 L50 95 L100 105 L150 98 L200 102 M0 250 L60 245 L120 255 L180 248 L240 252 L300 246 L360 254 L400 250 M0 350 L40 355 L80 345 L120 358 L160 342 L200 355'/%3E%3C/svg%3E");
+  background-size: 400px 400px;
+}
+
+/* Dripping Effect Border */
+.drip-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  pointer-events: none;
+  z-index: 1000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath fill='%238B0000' d='M0 0 L100 0 L100 5 Q95 5 95 8 Q95 15 92 18 Q90 20 88 18 Q85 12 85 8 Q85 5 80 5 Q75 5 75 8 Q75 12 73 15 Q72 18 70 15 Q68 10 68 8 Q68 5 65 5 L60 5 Q58 5 58 10 Q58 18 55 20 Q52 18 52 10 Q52 5 48 5 L40 5 Q38 5 38 8 Q38 12 36 16 Q35 20 33 16 Q31 10 31 8 Q31 5 28 5 L20 5 Q18 5 18 9 Q18 15 15 18 Q12 15 12 9 Q12 5 8 5 L0 5 Z'/%3E%3C/svg%3E");
+  background-size: 100px 20px;
+  background-repeat: repeat-x;
+  opacity: 0.6;
+}
+
+/* Spiderweb Pattern */
+.spiderweb-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='10' fill='none' stroke='%23E8DCC4' stroke-width='0.3'/%3E%3Ccircle cx='100' cy='100' r='25' fill='none' stroke='%23E8DCC4' stroke-width='0.3'/%3E%3Ccircle cx='100' cy='100' r='45' fill='none' stroke='%23E8DCC4' stroke-width='0.3'/%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='%23E8DCC4' stroke-width='0.3'/%3E%3Ccircle cx='100' cy='100' r='95' fill='none' stroke='%23E8DCC4' stroke-width='0.3'/%3E%3Cline x1='100' y1='0' x2='100' y2='200' stroke='%23E8DCC4' stroke-width='0.3'/%3E%3Cline x1='0' y1='100' x2='200' y2='100' stroke='%23E8DCC4' stroke-width='0.3'/%3E%3Cline x1='15' y1='15' x2='185' y2='185' stroke='%23E8DCC4' stroke-width='0.3'/%3E%3Cline x1='185' y1='15' x2='15' y2='185' stroke='%23E8DCC4' stroke-width='0.3'/%3E%3Cline x1='50' y1='0' x2='150' y2='200' stroke='%23E8DCC4' stroke-width='0.2'/%3E%3Cline x1='150' y1='0' x2='50' y2='200' stroke='%23E8DCC4' stroke-width='0.2'/%3E%3Cline x1='0' y1='50' x2='200' y2='150' stroke='%23E8DCC4' stroke-width='0.2'/%3E%3Cline x1='0' y1='150' x2='200' y2='50' stroke='%23E8DCC4' stroke-width='0.2'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* Rust/Grunge Corners */
+.rust-corner {
+  position: fixed;
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0.1;
+}
+
+.rust-corner--tl {
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(ellipse at top left, rgba(139, 69, 19, 0.3) 0%, transparent 70%);
+}
+
+.rust-corner--br {
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(ellipse at bottom right, rgba(139, 69, 19, 0.3) 0%, transparent 70%);
+}
+
+/* Vignette Effect */
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 6;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+/* Subtle Film Grain */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 7;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+  animation: grainShift 0.5s steps(10) infinite;
+}
+
+@keyframes grainShift {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-1%, -1%); }
+  20% { transform: translate(1%, 1%); }
+  30% { transform: translate(-1%, 1%); }
+  40% { transform: translate(1%, -1%); }
+  50% { transform: translate(-0.5%, 0.5%); }
+  60% { transform: translate(0.5%, -0.5%); }
+  70% { transform: translate(-0.5%, -0.5%); }
+  80% { transform: translate(0.5%, 0.5%); }
+  90% { transform: translate(0%, -1%); }
+}
+
+/* Gothic Border Pattern */
+.gothic-border-top,
+.gothic-border-bottom {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath fill='%238B0000' d='M0 20 L10 20 L15 10 L20 20 L30 20 L35 10 L40 20 L50 20 L50 15 L55 10 L50 5 L50 0 L40 0 L35 10 L30 0 L20 0 L15 10 L10 0 L0 0 Z'/%3E%3Cpath fill='%238B0000' d='M50 20 L60 20 L65 10 L70 20 L80 20 L85 10 L90 20 L100 20 L100 0 L90 0 L85 10 L80 0 L70 0 L65 10 L60 0 L50 0 L50 5 L55 10 L50 15 Z'/%3E%3C/svg%3E");
+  background-size: 100px 20px;
+  background-repeat: repeat-x;
+}
+
+.gothic-border-top {
+  top: 0;
+}
+
+.gothic-border-bottom {
+  bottom: 0;
+  transform: scaleY(-1);
+}

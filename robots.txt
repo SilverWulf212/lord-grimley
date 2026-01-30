@@ -1,0 +1,12 @@
+# Lord Grimley's Manor - robots.txt
+User-agent: *
+Allow: /
+
+# Disallow admin/cart pages (Shopify will handle these)
+Disallow: /cart
+Disallow: /checkout
+Disallow: /account
+Disallow: /admin
+
+# Sitemap
+Sitemap: https://www.lordgrimley.com/sitemap.xml
